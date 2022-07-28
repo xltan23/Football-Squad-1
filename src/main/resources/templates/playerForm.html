@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Application Form</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<marquee behavior="" direction="" style="background-color: pink; color: red;">You miss 100% of the shots you don't take</marquee>
+<body background="./images/Old Trafford.jpg" link="white" alink="blue" vlink="black">
+    <h1 style="background-color:palevioletred;">Player Profile</h1>
+    <a th:href="@{/dejavufc}">Home</a>
+
+    <form th:action="@{/playerForm}" th:object="${playerForm}" method="POST" style="background-color: rgb(240, 160, 216);">
+        <p> Name:
+            <input type="text" th:field="*{name}">
+        </p>
+        <p> Email:
+            <input type="text" th:field="*{email}">
+        </p>
+        <p> Height (cm):
+            <input type="text" th:field="*{height}">
+        </p>
+        <p> Weight (kg):
+            <input type="text" th:field="*{weight}">
+        </p>
+        <p> Postion:
+            <input type="text" th:field="*{position}">
+        </p>
+
+        <br><br>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+        
+    </form>
+
+    <div th:if="${errorMessage}" th:text="${errorMessage}" style="color: red; font-size: italics;"></div>
+</body>
+</html>

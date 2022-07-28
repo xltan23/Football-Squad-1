@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Applicants</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<marquee behavior="" direction="" style="background-color:cyan; color: blue;">May the odds be ever in your favour</marquee>
+<body background="./images/Old Trafford.jpg" link="white" alink="blue" vlink="black">
+    <h1 style="background-color: aqua;">Applicants</h1>
+    <a th:href="@{/dejavufc}">Home</a>
+    <a th:href="@{/playerForm}">Application Form</a>
+
+    <br><br>
+
+    <div>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Height</td>
+                <td>Weight</td>
+                <td>Position</td>
+            </tr>
+            <tr th:each="player: ${applicantList}">
+                <td th:text="${player.name}"></td>
+                <td th:text="${player.email}"></td>
+                <td th:text="${player.height}"></td>
+                <td th:text="${player.weight}"></td>
+                <td th:text="${player.position}"></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

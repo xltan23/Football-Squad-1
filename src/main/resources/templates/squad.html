@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dejavu Football Club Squad 22/23</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<marquee behavior="" direction="" style="background-color: teal; color: greenyellow;">Dejavu Football Club Squad</marquee>
+<body background="./images/Old Trafford.jpg" link="red" alink="blue" vlink="white">
+    <h1 style="background-color: lightseagreen;">First Team Squad</h1>
+    <a th:href="@{/dejavufc}">Home</a>
+    <a th:href="@{/playerForm}">Application Form</a>
+
+    <div>
+        <table style="background-color: rgb(124, 235, 77);">
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Height</td>
+                <td>Weight</td>
+                <td>Position</td>
+            </tr>
+            <tr th:each="footballer : ${squadList}">
+                <td th:text="${footballer.firstName}"></td>
+                <td th:text="${footballer.lastName}"></td>
+                <td th:text="${footballer.height}"></td>
+                <td th:text="${footballer.weight}"></td>
+                <td th:text="${footballer.position}"></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

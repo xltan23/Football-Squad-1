@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dejavu Football Club</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+</head>
+<marquee behavior="" direction="">Welcome to the Theatre of Dreams</marquee>
+
+<body background="./images/Old Trafford.jpg" link="white" alink="blue" vlink="black">
+
+    <img src="./images/Manchester-United-Crest.png" height="100px" width="100px">
+    <h1 th:text="${message}"></h1>
+
+    <div>
+        <a th:href="@{/squad}">Squad</a> &nbsp; &nbsp; &nbsp;
+        <a th:href="@{/applicants}">Applicants</a> &nbsp; &nbsp; &nbsp;
+        <a th:href="@{/playerForm}">Application Form</a>
+    </div>
+
+
+    <br><br><br><br><br>
+
+    <h2>Football, bloody hell!</h2>
+</body>
+</html>
